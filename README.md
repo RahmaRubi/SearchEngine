@@ -1,3 +1,4 @@
+
 # Mini Search Engine
 
 Simple keyword-based search engine prototype built with Python.
@@ -30,3 +31,5 @@ Open `http://127.0.0.1:5000` in your browser.
 ---
 
 *Project created for educational purposes.*
+=======
+# SearchEngine
