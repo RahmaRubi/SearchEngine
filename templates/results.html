@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results for {{ query }}</title>
+    <style>
+        body{font-family:Arial;margin:40px;}
+        mark{background:yellow;}
+        .url{font-size:14px;color:green;}
+    </style>
+</head>
+<body>
+    <h2>Results for "{{ query }}" {% if use_pr %}(PageRank){% endif %}</h2>
+    <a href="/">New search</a><br><br>
+    {% if results %}
+        <ul>
+        {% for url, snippet in results %}
+            <li><div class="url"><a href="{{ url }}" target="_blank">{{ url }}</a></div>
+                <div>{{ snippet|safe }}</div></li><br>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results.</p>
+    {% endif %}
+</body>
+</html>
